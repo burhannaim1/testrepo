@@ -1,0 +1,38 @@
+select [Key],value from SystemConfigurationKeys where [Key] like '%corehotfix%'
+
+--update SystemConfigurationKeys set Value=0.0000 where [Key]='CoreHotFix'
+
+select ComponentName, ComponentVersion from SmartCareComponents
+
+--update SmartCareComponents set ComponentVersion='SC.TX.6.0_0.03.000.2208.001' where ComponentName='TexasCustom'
+
+select connectionstring from systemdatabases
+
+select ReportServerPath, * From reports order by reports.ReportServerPath asc
+
+select ReportURL, * from systemreports order by systemreports.reportURL asc
+
+
+azure\texecad
+4DdooXGAGMPQPNt4INwo
+
+-a --disable-validate-certs
+
+
+Changes in the DB config script
+
+-change DB to simple
+-for 6.0 add the cache configs
+-SELECT TOP 100 authenticationtype , usercode  FROM staff WHERE   authenticationtype = 'o' ORDER BY 1 DESC-- For Lifepath Environments
+-Look for New Relic in all folders and 
+
+
+
+ALTER DATABASE GulfBendSmartcareTrain
+SET MULTI_USER;
+
+
+HOT-5.0 Builds
+Base	SC.CORE.5.0_1.31.053.2303.001
+Custom	
+TexasCustom	SC.TX.2.0_0.66.000.2205.001
